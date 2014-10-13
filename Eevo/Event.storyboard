@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
-        <!--Event Details View Controller-->
+        <!--Event View Controller-->
         <scene sceneID="OPh-bD-qbd">
             <objects>
-                <viewController storyboardIdentifier="EventDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ulp-tr-vyh" customClass="EventDetailsViewController" customModule="Eevo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EventViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ulp-tr-vyh" customClass="EventViewController" customModule="Eevo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Sgs-MO-FUd"/>
                         <viewControllerLayoutGuide type="bottom" id="E0q-lo-IPq"/>

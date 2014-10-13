@@ -1,5 +1,5 @@
 //
-//  EventDetailsViewController.swift
+//  OrganizerViewController.swift
 //  Eevo
 //
 //  Created by Paul Lo on 10/12/14.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EventDetailsViewController: UIViewController {
+class OrganizerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <scenes>
+        <!--Organizer-->
+        <scene sceneID="98s-Ei-hK4">
+            <objects>
+                <viewController storyboardIdentifier="OrganizerViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tog-Bb-vGb" customClass="OrganizerViewController" customModule="Eevo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Reu-Ss-QpR"/>
+                        <viewControllerLayoutGuide type="bottom" id="MJK-Ng-PpX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eqN-zh-Iud">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Organizer" id="0YI-QG-EIY"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Up8-sd-ONt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="490.5" y="33"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5Eb-kh-2hn">
+            <objects>
+                <navigationController storyboardIdentifier="OrganizerNavigationController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ks9-Gj-e6G" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pV4-Ze-AKV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="tog-Bb-vGb" kind="relationship" relationship="rootViewController" id="hLf-zg-rfC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nW7-TX-wPF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-64.5" y="33"/>
+        </scene>
+    </scenes>
+</document>

@@ -8,12 +8,13 @@
 
 import UIKit
 
-class EventViewController: LoggedInViewController {
+class EventViewController: LoggedInViewController, UITableViewDataSource, UITableViewDelegate {
 
     var event: PFObject!
     var organizer: PFObject!
     var isFromOrganizerViewController = false
     
+    @IBOutlet weak var eventTableView: UITableView!
     @IBOutlet weak var eventNameLabel: UILabel!
     @IBOutlet weak var backgroundImageView: PFImageView!
     @IBOutlet weak var organizerThumbnailView: PFImageView!
@@ -26,6 +27,9 @@ class EventViewController: LoggedInViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.eventTableView.delegate = self
+        self.eventTableView.dataSource = self
+        self.eventTableView.rowHeight = 175.0
         loadFromDataSource()
     }
     
@@ -80,12 +84,29 @@ class EventViewController: LoggedInViewController {
             }
         }
     }
+
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Event Ratings"
+    }
+    
+    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 175.0
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        var count = 0
+        return count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCellWithIdentifier("EventRatingCell") as EventRatingCell?
+        return UITableViewCell()
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
+    }    
 
     /*
     // MARK: - Navigation

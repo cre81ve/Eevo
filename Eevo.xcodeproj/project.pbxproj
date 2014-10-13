@@ -23,6 +23,8 @@
 		F2A7F97119EBA22700FF64B6 /* OrganizerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2A7F96F19EBA22700FF64B6 /* OrganizerCell.xib */; };
 		F2A7F97419EBAA0200FF64B6 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A7F97219EBAA0200FF64B6 /* EventCell.swift */; };
 		F2A7F97519EBAA0200FF64B6 /* EventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2A7F97319EBAA0200FF64B6 /* EventCell.xib */; };
+		F2A7F97A19EC896D00FF64B6 /* EventRatingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A7F97819EC896D00FF64B6 /* EventRatingCell.swift */; };
+		F2A7F97B19EC896D00FF64B6 /* EventRatingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2A7F97919EC896D00FF64B6 /* EventRatingCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		F2A7F96F19EBA22700FF64B6 /* OrganizerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrganizerCell.xib; sourceTree = "<group>"; };
 		F2A7F97219EBAA0200FF64B6 /* EventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		F2A7F97319EBAA0200FF64B6 /* EventCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventCell.xib; sourceTree = "<group>"; };
+		F2A7F97819EC896D00FF64B6 /* EventRatingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventRatingCell.swift; sourceTree = "<group>"; };
+		F2A7F97919EC896D00FF64B6 /* EventRatingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventRatingCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +168,7 @@
 			children = (
 				F2A7F97219EBAA0200FF64B6 /* EventCell.swift */,
 				F2A7F96E19EBA22700FF64B6 /* OrganizerCell.swift */,
+				F2A7F97819EC896D00FF64B6 /* EventRatingCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -190,6 +195,7 @@
 			children = (
 				F2A7F96819EB61B000FF64B6 /* Event.storyboard */,
 				F2A7F97319EBAA0200FF64B6 /* EventCell.xib */,
+				F2A7F97919EC896D00FF64B6 /* EventRatingCell.xib */,
 				F2A7F96219EB5AB100FF64B6 /* LoggedInView.xib */,
 				F2A7F96C19EB6EAA00FF64B6 /* Organizer.storyboard */,
 				F2A7F96F19EBA22700FF64B6 /* OrganizerCell.xib */,
@@ -287,6 +293,7 @@
 				5477F02119EA52D600B6D36C /* Images.xcassets in Resources */,
 				F2A7F97519EBAA0200FF64B6 /* EventCell.xib in Resources */,
 				F2A7F96919EB61B000FF64B6 /* Event.storyboard in Resources */,
+				F2A7F97B19EC896D00FF64B6 /* EventRatingCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +348,7 @@
 				F2A7F96619EB60CB00FF64B6 /* EventViewController.swift in Sources */,
 				5477F01C19EA52D600B6D36C /* LoggedInViewController.swift in Sources */,
 				F2A7F97019EBA22700FF64B6 /* OrganizerCell.swift in Sources */,
+				F2A7F97A19EC896D00FF64B6 /* EventRatingCell.swift in Sources */,
 				F2A7F97419EBAA0200FF64B6 /* EventCell.swift in Sources */,
 				5477F01A19EA52D600B6D36C /* AppDelegate.swift in Sources */,
 			);

@@ -39,6 +39,11 @@ class LoggedInViewController: UIViewController, PFLogInViewControllerDelegate {
             presentViewController(logInController, animated: true, completion: nil)
         }
     }
+    
+    func onLogOut() {
+        PFUser.logOut()
+        requireLoggedin()
+    }
 
     func logInViewController(logInController: PFLogInViewController!, didLogInUser user: PFUser!) {
         println("didLogInUser: User logged in")

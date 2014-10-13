@@ -85,8 +85,8 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="backgroundImageView" destination="Y53-rN-p1x" id="1sR-9k-MK5"/>
-                <outlet property="eventCategoriesLabel" destination="pVN-mo-BoY" id="Bgj-jk-GFs"/>
                 <outlet property="nameLabel" destination="8Tt-gF-0Bf" id="p81-ar-b9s"/>
+                <outlet property="organizerSummaryLabel" destination="pVN-mo-BoY" id="7ea-dr-4of"/>
                 <outlet property="organizersCountLabel" destination="vGq-or-hRW" id="Qwc-3m-jgp"/>
                 <outlet property="thumbnailView" destination="BzM-aa-78G" id="3Nu-Fn-FRo"/>
                 <outlet property="totalScoreLabel" destination="vGq-or-hRW" id="fi7-Zi-9Hi"/>

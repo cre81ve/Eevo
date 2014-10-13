@@ -10,9 +10,14 @@ import UIKit
 
 class EventViewController: LoggedInViewController, UITableViewDataSource, UITableViewDelegate {
 
+    enum EventSection: Int {
+        case EventRatings = 0
+    }
+
     var event: PFObject!
     var organizer: PFObject!
     var isFromOrganizerViewController = false
+    var ratingStats: [PFObject] = []
     
     @IBOutlet weak var eventTableView: UITableView!
     @IBOutlet weak var eventNameLabel: UILabel!
@@ -29,7 +34,7 @@ class EventViewController: LoggedInViewController, UITableViewDataSource, UITabl
         super.viewDidLoad()
         self.eventTableView.delegate = self
         self.eventTableView.dataSource = self
-        self.eventTableView.rowHeight = 175.0
+        self.eventTableView.rowHeight = 57.0
         loadFromDataSource()
     }
     
@@ -85,22 +90,43 @@ class EventViewController: LoggedInViewController, UITableViewDataSource, UITabl
         }
     }
 
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Event Ratings"
+        var title: String? = nil
+        switch EventSection.fromRaw(section)! {
+            case .EventRatings: title = "Event Ratings"
+        }
+        return title
     }
     
     func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 175.0
+        return 57.0
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         var count = 0
+        switch EventSection.fromRaw(section)! {
+            case .EventRatings: count = 1 // self.ratingStats.count
+        }
         return count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("EventRatingCell") as EventRatingCell?
-        return UITableViewCell()
+        if cell == nil {
+            var nib = UINib(nibName: "EventRatingCell", bundle: nil)
+            var objects = nib.instantiateWithOwner(self, options: nil)
+            cell = objects[0] as? EventRatingCell
+        }
+        var eventRating: PFObject? = nil
+        switch EventSection.fromRaw(indexPath.section)! {
+            case .EventRatings: break
+        }
+        cell?.selectionStyle = .None
+        return cell ?? UITableViewCell()
     }
     
     override func didReceiveMemoryWarning() {

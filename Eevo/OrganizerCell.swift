@@ -17,7 +17,7 @@ class OrganizerCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var thumbnailView: PFImageView!
     @IBOutlet weak var backgroundImageView: UIImageView!
-    @IBOutlet weak var eventCategoriesLabel: UILabel!
+    @IBOutlet weak var organizerSummaryLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -11,6 +11,7 @@ import UIKit
 class EventCell: UITableViewCell {
 
     var event: PFObject!
+    var showThumbnail = true
     
     @IBOutlet weak var eventNameLabel: UILabel!
     @IBOutlet weak var backgroundImageView: PFImageView!
@@ -28,8 +29,10 @@ class EventCell: UITableViewCell {
             organizer.fetchIfNeededInBackgroundWithBlock() { (object: PFObject!, error: NSError!) -> Void in
                 if var user = object["user"] as? PFObject {
                     user.fetchIfNeededInBackgroundWithBlock({ (userFetched: PFObject!, error: NSError!) -> Void in
-                        self.organizerThumbnailView.file = (userFetched["avatar_thumbnail"] as? PFFile)
-                        self.organizerThumbnailView.loadInBackground()
+                        if self.showThumbnail {
+                            self.organizerThumbnailView.file = (userFetched["avatar_thumbnail"] as? PFFile)
+                            self.organizerThumbnailView.loadInBackground()
+                        }
                     })
                 }
             }

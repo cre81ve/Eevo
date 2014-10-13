@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="EventCell" rowHeight="175" id="KGk-i7-Jjw" customClass="EventCell" customModule="Eevo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="175"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TnI-5R-Fhr" customClass="PFImageView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="120" id="h6m-IS-i55"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32 attending" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wic-30-FgA">
+                        <rect key="frame" x="8" y="96" width="76" height="16"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valentine's Day Single's Party" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mzu-cL-zut">
+                        <rect key="frame" x="47" y="8" width="226" height="20"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rgp-3F-INT">
+                        <rect key="frame" x="0.0" y="120" width="320" height="55"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oct 12, 2014 7:00pm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x01-73-LKK">
+                                <rect key="frame" x="8" y="32" width="118" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32 Market St., San Francisco, CA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dwo-Zi-3jL">
+                                <rect key="frame" x="8" y="8" width="201" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.94231865875912424" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Dwo-Zi-3jL" firstAttribute="leading" secondItem="rgp-3F-INT" secondAttribute="leading" constant="8" id="VJp-3X-JJm"/>
+                            <constraint firstAttribute="bottom" secondItem="x01-73-LKK" secondAttribute="bottom" constant="8" id="Ys9-Q0-7dT"/>
+                            <constraint firstItem="Dwo-Zi-3jL" firstAttribute="top" secondItem="rgp-3F-INT" secondAttribute="top" constant="8" id="qC2-Hb-pSM"/>
+                            <constraint firstItem="x01-73-LKK" firstAttribute="leading" secondItem="rgp-3F-INT" secondAttribute="leading" constant="8" id="sZd-0d-jJl"/>
+                            <constraint firstAttribute="height" constant="60" id="uvN-Su-pQa"/>
+                            <constraint firstItem="x01-73-LKK" firstAttribute="top" secondItem="Dwo-Zi-3jL" secondAttribute="bottom" constant="8" id="yPV-Ia-CZQ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="uvN-Su-pQa"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3nE-Dr-z2d" customClass="PFImageView">
+                        <rect key="frame" x="262" y="81" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="5aQ-9m-B8M"/>
+                            <constraint firstAttribute="width" constant="50" id="DzQ-TB-yyS"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="wic-30-FgA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="572-WF-hEb"/>
+                    <constraint firstAttribute="trailing" secondItem="TnI-5R-Fhr" secondAttribute="trailing" id="NkH-be-ZfP"/>
+                    <constraint firstItem="rgp-3F-INT" firstAttribute="top" secondItem="wic-30-FgA" secondAttribute="bottom" constant="8" id="R8g-Ly-qgQ"/>
+                    <constraint firstAttribute="trailing" secondItem="rgp-3F-INT" secondAttribute="trailing" id="WJt-fr-Oqq"/>
+                    <constraint firstItem="TnI-5R-Fhr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Wo0-mx-u2o"/>
+                    <constraint firstItem="Mzu-cL-zut" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Xw3-NX-B9a"/>
+                    <constraint firstItem="3nE-Dr-z2d" firstAttribute="top" secondItem="Mzu-cL-zut" secondAttribute="bottom" constant="53" id="XxI-av-LVG"/>
+                    <constraint firstAttribute="trailing" secondItem="3nE-Dr-z2d" secondAttribute="trailing" constant="8" id="YkU-UO-TEa"/>
+                    <constraint firstItem="rgp-3F-INT" firstAttribute="top" secondItem="TnI-5R-Fhr" secondAttribute="bottom" id="bHE-fR-ssJ"/>
+                    <constraint firstItem="rgp-3F-INT" firstAttribute="top" secondItem="TnI-5R-Fhr" secondAttribute="bottom" id="eFy-bn-9DG"/>
+                    <constraint firstItem="TnI-5R-Fhr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="elq-Ak-U1Q"/>
+                    <constraint firstItem="rgp-3F-INT" firstAttribute="top" secondItem="wic-30-FgA" secondAttribute="bottom" constant="8" id="gBF-46-o7U"/>
+                    <constraint firstItem="rgp-3F-INT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="m88-gm-9sj"/>
+                    <constraint firstItem="wic-30-FgA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="slP-Bd-kBr"/>
+                    <constraint firstAttribute="centerX" secondItem="Mzu-cL-zut" secondAttribute="centerX" id="uxb-2N-31K"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="slP-Bd-kBr"/>
+                        <exclude reference="R8g-Ly-qgQ"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="addressLabel" destination="Dwo-Zi-3jL" id="fgC-GZ-ZSl"/>
+                <outlet property="attendingCountLabel" destination="wic-30-FgA" id="JkK-bp-Nlm"/>
+                <outlet property="backgroundImageView" destination="TnI-5R-Fhr" id="BSG-8v-3Vm"/>
+                <outlet property="eventNameLabel" destination="Mzu-cL-zut" id="Gow-JS-B76"/>
+                <outlet property="eventTimeLabel" destination="x01-73-LKK" id="944-CZ-ZaT"/>
+                <outlet property="organizerThumbnailView" destination="3nE-Dr-z2d" id="xtm-cm-DR6"/>
+            </connections>
+            <point key="canvasLocation" x="140" y="161"/>
+        </tableViewCell>
+    </objects>
+</document>

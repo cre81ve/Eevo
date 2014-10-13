@@ -13,6 +13,7 @@ class LoggedInViewController: UIViewController, PFLogInViewControllerDelegate {
     @IBOutlet var logInViewTitleLabel: UILabel!
     
     var logInController = PFLogInViewController()
+    var requireLoggedInOnView = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,8 +28,14 @@ class LoggedInViewController: UIViewController, PFLogInViewControllerDelegate {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        if requireLoggedInOnView {
+            requireLoggedin()
+        }
+    }
+    
+    func requireLoggedin() {
         var currentUser = PFUser.currentUser()
-        if currentUser == nil {        
+        if currentUser == nil {
             presentViewController(logInController, animated: true, completion: nil)
         }
     }

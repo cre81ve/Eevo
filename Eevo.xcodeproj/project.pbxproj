@@ -15,6 +15,9 @@
 		5477F03019EA52D600B6D36C /* EevoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5477F02F19EA52D600B6D36C /* EevoTests.swift */; };
 		9D67ADAE6CE00CF6F1F7E501 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EE51AEB5279766EA146F693 /* libPods.a */; };
 		F2A7F96319EB5AB100FF64B6 /* LoggedInView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2A7F96219EB5AB100FF64B6 /* LoggedInView.xib */; };
+		F2A7F96619EB60CB00FF64B6 /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A7F96419EB60CB00FF64B6 /* EventDetailsViewController.swift */; };
+		F2A7F96719EB60CB00FF64B6 /* EventDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2A7F96519EB60CB00FF64B6 /* EventDetails.xib */; };
+		F2A7F96919EB61B000FF64B6 /* EventDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2A7F96819EB61B000FF64B6 /* EventDetails.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +46,9 @@
 		D3A357ED2D2D9C148BADF24B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F2A7F95E19EB52B700FF64B6 /* Eevo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Eevo-Bridging-Header.h"; sourceTree = "<group>"; };
 		F2A7F96219EB5AB100FF64B6 /* LoggedInView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoggedInView.xib; sourceTree = "<group>"; };
+		F2A7F96419EB60CB00FF64B6 /* EventDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
+		F2A7F96519EB60CB00FF64B6 /* EventDetails.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventDetails.xib; sourceTree = "<group>"; };
+		F2A7F96819EB61B000FF64B6 /* EventDetails.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EventDetails.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				5477F01B19EA52D600B6D36C /* LoggedInViewController.swift */,
+				F2A7F96419EB60CB00FF64B6 /* EventDetailsViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -168,6 +175,8 @@
 		F2A7F96119EB5A6F00FF64B6 /* Xibs */ = {
 			isa = PBXGroup;
 			children = (
+				F2A7F96819EB61B000FF64B6 /* EventDetails.storyboard */,
+				F2A7F96519EB60CB00FF64B6 /* EventDetails.xib */,
 				F2A7F96219EB5AB100FF64B6 /* LoggedInView.xib */,
 			);
 			name = Xibs;
@@ -258,7 +267,9 @@
 				5477F01F19EA52D600B6D36C /* Main.storyboard in Resources */,
 				F2A7F96319EB5AB100FF64B6 /* LoggedInView.xib in Resources */,
 				5477F02419EA52D600B6D36C /* LaunchScreen.xib in Resources */,
+				F2A7F96719EB60CB00FF64B6 /* EventDetails.xib in Resources */,
 				5477F02119EA52D600B6D36C /* Images.xcassets in Resources */,
+				F2A7F96919EB61B000FF64B6 /* EventDetails.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,6 +320,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2A7F96619EB60CB00FF64B6 /* EventDetailsViewController.swift in Sources */,
 				5477F01C19EA52D600B6D36C /* LoggedInViewController.swift in Sources */,
 				5477F01A19EA52D600B6D36C /* AppDelegate.swift in Sources */,
 			);

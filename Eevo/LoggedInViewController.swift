@@ -29,11 +29,11 @@ class LoggedInViewController: UIViewController, PFLogInViewControllerDelegate {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         if requireLoggedInOnView {
-            requireLoggedin()
+            requireLoggedIn()
         }
     }
     
-    func requireLoggedin() {
+    func requireLoggedIn() {
         var currentUser = PFUser.currentUser()
         if currentUser == nil {
             presentViewController(logInController, animated: true, completion: nil)
@@ -42,7 +42,7 @@ class LoggedInViewController: UIViewController, PFLogInViewControllerDelegate {
     
     func onLogOut() {
         PFUser.logOut()
-        requireLoggedin()
+        requireLoggedIn()
     }
 
     func logInViewController(logInController: PFLogInViewController!, didLogInUser user: PFUser!) {

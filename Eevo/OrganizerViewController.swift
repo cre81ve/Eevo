@@ -129,7 +129,6 @@ class OrganizerViewController: LoggedInViewController, UITableViewDataSource, UI
             var storyboard = UIStoryboard(name: "Event", bundle: nil)
             var eventController = storyboard.instantiateViewControllerWithIdentifier("EventViewController") as EventViewController
             eventController.event = event
-            eventController.isFromOrganizerViewController = true
             self.navigationController?.pushViewController(eventController, animated: true)
         }
     }

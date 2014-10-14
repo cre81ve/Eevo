@@ -32,6 +32,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <color key="backgroundColor" cyan="0.05414575729927007" magenta="0.0039673447608947754" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                 <constraints>
                     <constraint firstItem="d3I-mH-55X" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="B4l-3y-8wF"/>
                     <constraint firstItem="KhG-HR-GNn" firstAttribute="top" secondItem="d3I-mH-55X" secondAttribute="bottom" constant="3" id="KRL-mv-ImR"/>
@@ -43,6 +44,11 @@
                     <constraint firstItem="d3I-mH-55X" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="tbj-KA-dtn"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="eventCategoryLabel" destination="d3I-mH-55X" id="9Wo-XC-ZSY"/>
+                <outlet property="ratingLabel" destination="5c4-2G-sMk" id="3fW-DL-xdz"/>
+                <outlet property="ratingsCountLabel" destination="KhG-HR-GNn" id="Koc-Yl-0hk"/>
+            </connections>
             <point key="canvasLocation" x="140" y="161.5"/>
         </tableViewCell>
     </objects>

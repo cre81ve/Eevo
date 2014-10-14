@@ -74,6 +74,18 @@ class EventViewController: LoggedInViewController, UITableViewDataSource, UITabl
         } else {
             self.eventTimeLabel.text = ""
         }
+        
+        var ratingQuery = PFQuery(className: "OrganizerRatingStats")
+        ratingQuery.whereKey("event", equalTo: event)
+        ratingQuery.includeKey("rating_spec")
+        ratingQuery.findObjectsInBackgroundWithBlock { (objects: [AnyObject]!, error: NSError!) -> Void in
+            if objects != nil {
+                for rating in objects {
+                    self.ratingStats.append(rating as PFObject)
+                }
+            }
+            self.eventTableView.reloadData()
+        }
     }
 
 
@@ -91,7 +103,7 @@ class EventViewController: LoggedInViewController, UITableViewDataSource, UITabl
     }
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+        return self.ratingStats.isEmpty ? 0 : 1
     }
 
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -109,7 +121,7 @@ class EventViewController: LoggedInViewController, UITableViewDataSource, UITabl
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         var count = 0
         switch EventSection.fromRaw(section)! {
-            case .EventRatings: count = 1 // self.ratingStats.count
+            case .EventRatings: count = self.ratingStats.count
         }
         return count
     }
@@ -123,7 +135,7 @@ class EventViewController: LoggedInViewController, UITableViewDataSource, UITabl
         }
         var eventRating: PFObject? = nil
         switch EventSection.fromRaw(indexPath.section)! {
-            case .EventRatings: break
+            case .EventRatings: cell?.updateCellWithRating(self.ratingStats[indexPath.row])
         }
         cell?.selectionStyle = .None
         return cell ?? UITableViewCell()

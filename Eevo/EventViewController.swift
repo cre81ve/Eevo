@@ -18,6 +18,7 @@ class EventViewController: LoggedInViewController, UITableViewDataSource, UITabl
     var organizer: PFObject!
     var isFromOrganizerViewController = false
     var ratingStats: [PFObject] = []
+    var joined = false
     
     @IBOutlet weak var eventTableView: UITableView!
     @IBOutlet weak var eventNameLabel: UILabel!
@@ -73,6 +74,15 @@ class EventViewController: LoggedInViewController, UITableViewDataSource, UITabl
             self.eventTimeLabel.text = startTimeStr
         } else {
             self.eventTimeLabel.text = ""
+        }
+        
+        var joinQuery = PFQuery(className: "EventParticipant")
+        joinQuery.whereKey("event", equalTo: event)
+        joinQuery.whereKey("user", equalTo: PFUser.currentUser())
+        joinQuery.findObjectsInBackgroundWithBlock { (objects: [AnyObject]!, error: NSError!) -> Void in
+            var joining: PFObject! = nil
+            self.joined = objects != nil && !objects.isEmpty
+            self.joinOrRateButton.setTitle(self.joined ? "Joined" : "Join", forState: .Normal)
         }
         
         var ratingQuery = PFQuery(className: "OrganizerRatingStats")
@@ -139,6 +149,34 @@ class EventViewController: LoggedInViewController, UITableViewDataSource, UITabl
         }
         cell?.selectionStyle = .None
         return cell ?? UITableViewCell()
+    }
+    
+    @IBAction func onJoinOrRate(sender: AnyObject) {
+        var joinQuery = PFQuery(className: "EventParticipant")
+        joinQuery.whereKey("event", equalTo: event)
+        joinQuery.whereKey("user", equalTo: PFUser.currentUser())
+        joinQuery.findObjectsInBackgroundWithBlock { (objects: [AnyObject]!, error: NSError!) -> Void in
+            var joining: PFObject! = nil
+            if objects != nil && !objects.isEmpty {
+                joining = objects[0] as? PFObject
+            }
+            if joining == nil {
+                joining = PFObject(className: "EventParticipant")
+                joining["user"] = PFUser.currentUser()
+                joining["event"] = self.event
+                joining.saveInBackgroundWithBlock({ (success: Bool, error: NSError!) -> Void in
+                    if success {
+                        self.joinOrRateButton.setTitle("Joined", forState: .Normal)
+                        self.joined = true
+                    } else {
+                        self.joinOrRateButton.setTitle("Join", forState: .Normal)
+                        self.joined = false
+                    }
+                    
+                })
+            }
+            self.joinOrRateButton.setTitle(self.joined ? "Joined" : "Join", forState: .Normal)
+        }
     }
     
     override func didReceiveMemoryWarning() {

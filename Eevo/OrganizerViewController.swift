@@ -42,7 +42,7 @@ class OrganizerViewController: LoggedInViewController, UITableViewDataSource, UI
             self.headerBackgroundImageView.loadInBackground()
             if var user = object["user"] as? PFObject {
                 user.fetchIfNeededInBackgroundWithBlock({ (userFetched: PFObject!, error: NSError!) -> Void in
-                    self.title = (userFetched["name"] as? String)
+                    //self.title = (userFetched["name"] as? String)
                     self.headerNameLabel.text = self.title
                     self.headerThumbnailView.file = (userFetched["avatar_thumbnail"] as? PFFile)
                     self.headerThumbnailView.loadInBackground()

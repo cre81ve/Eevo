@@ -82,7 +82,7 @@ class EventViewController: LoggedInViewController, UITableViewDataSource, UITabl
         joinQuery.findObjectsInBackgroundWithBlock { (objects: [AnyObject]!, error: NSError!) -> Void in
             var joining: PFObject! = nil
             self.joined = objects != nil && !objects.isEmpty
-            self.joinOrRateButton.setTitle(self.joined ? "Joined" : "Join", forState: .Normal)
+            self.joinOrRateButton.setTitle(self.joined ? "Joined - Rate This Event" : "Join", forState: .Normal)
         }
         
         var ratingQuery = PFQuery(className: "OrganizerRatingStats")
@@ -152,6 +152,13 @@ class EventViewController: LoggedInViewController, UITableViewDataSource, UITabl
     }
     
     @IBAction func onJoinOrRate(sender: AnyObject) {
+        if self.joined {
+            var rateNavigationController = self.storyboard?.instantiateViewControllerWithIdentifier("EventRateNavigationController") as UINavigationController
+            var rateController = rateNavigationController.viewControllers[0] as EventRateViewController
+            rateController.event = self.event
+            presentViewController(rateNavigationController, animated: true, completion: nil)
+            return
+        }
         var joinQuery = PFQuery(className: "EventParticipant")
         joinQuery.whereKey("event", equalTo: event)
         joinQuery.whereKey("user", equalTo: PFUser.currentUser())
@@ -166,7 +173,7 @@ class EventViewController: LoggedInViewController, UITableViewDataSource, UITabl
                 joining["event"] = self.event
                 joining.saveInBackgroundWithBlock({ (success: Bool, error: NSError!) -> Void in
                     if success {
-                        self.joinOrRateButton.setTitle("Joined", forState: .Normal)
+                        self.joinOrRateButton.setTitle("Joined - Rate This Event", forState: .Normal)
                         self.joined = true
                     } else {
                         self.joinOrRateButton.setTitle("Join", forState: .Normal)

@@ -25,6 +25,8 @@
 		F2A7F97519EBAA0200FF64B6 /* EventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2A7F97319EBAA0200FF64B6 /* EventCell.xib */; };
 		F2A7F97A19EC896D00FF64B6 /* EventRatingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A7F97819EC896D00FF64B6 /* EventRatingCell.swift */; };
 		F2A7F97B19EC896D00FF64B6 /* EventRatingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2A7F97919EC896D00FF64B6 /* EventRatingCell.xib */; };
+		F2A7F9B319ED0CF900FF64B6 /* EventRateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A7F9B219ED0CF900FF64B6 /* EventRateViewController.swift */; };
+		F2A7F9B519ED0FA700FF64B6 /* RatingInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A7F9B419ED0FA700FF64B6 /* RatingInputCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		F2A7F97319EBAA0200FF64B6 /* EventCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventCell.xib; sourceTree = "<group>"; };
 		F2A7F97819EC896D00FF64B6 /* EventRatingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventRatingCell.swift; sourceTree = "<group>"; };
 		F2A7F97919EC896D00FF64B6 /* EventRatingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventRatingCell.xib; sourceTree = "<group>"; };
+		F2A7F9B219ED0CF900FF64B6 /* EventRateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventRateViewController.swift; sourceTree = "<group>"; };
+		F2A7F9B419ED0FA700FF64B6 /* RatingInputCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingInputCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +173,7 @@
 				F2A7F97219EBAA0200FF64B6 /* EventCell.swift */,
 				F2A7F96E19EBA22700FF64B6 /* OrganizerCell.swift */,
 				F2A7F97819EC896D00FF64B6 /* EventRatingCell.swift */,
+				F2A7F9B419ED0FA700FF64B6 /* RatingInputCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -179,6 +184,7 @@
 				5477F01B19EA52D600B6D36C /* LoggedInViewController.swift */,
 				F2A7F96419EB60CB00FF64B6 /* EventViewController.swift */,
 				F2A7F96A19EB6E5E00FF64B6 /* OrganizerViewController.swift */,
+				F2A7F9B219ED0CF900FF64B6 /* EventRateViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -349,6 +355,8 @@
 				5477F01C19EA52D600B6D36C /* LoggedInViewController.swift in Sources */,
 				F2A7F97019EBA22700FF64B6 /* OrganizerCell.swift in Sources */,
 				F2A7F97A19EC896D00FF64B6 /* EventRatingCell.swift in Sources */,
+				F2A7F9B319ED0CF900FF64B6 /* EventRateViewController.swift in Sources */,
+				F2A7F9B519ED0FA700FF64B6 /* RatingInputCell.swift in Sources */,
 				F2A7F97419EBAA0200FF64B6 /* EventCell.swift in Sources */,
 				5477F01A19EA52D600B6D36C /* AppDelegate.swift in Sources */,
 			);
